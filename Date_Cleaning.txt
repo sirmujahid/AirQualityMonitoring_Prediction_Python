@@ -1,0 +1,8 @@
+import pandas as pd 
+import datetime
+
+data = pd.read_csv("aqms.csv")
+date = datetime.datetime.today()
+dated = date.strftime("%m""/""%d""/""%Y")
+clean_column = data[['Date']].fillna(dated) 
+clean_column
